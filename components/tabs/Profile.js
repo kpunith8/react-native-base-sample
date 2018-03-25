@@ -1,4 +1,5 @@
 import React from 'react';
+import BookList from '../BookList';
 
 import {
     Container, Header, Title, Content, Footer,
@@ -11,12 +12,16 @@ class Profile extends React.Component {
         tabBarIcon: ({ tintColor }) => (
             <Icon name='user' type='FontAwesome' style={{ color: tintColor }}/>
         )
-    }
+    };
+
     render() {
+        const { params } = this.props.navigation.state;
+        const books = params ? params.books : [];
+
         return (
             <Container>
                 <Content>
-                    <Text> Profile </Text>
+                    <BookList books={books} />
                 </Content>
             </Container>
         );

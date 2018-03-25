@@ -25,11 +25,14 @@ const HomeTabNavigator = TabNavigator({
     ProfileTab: { screen: Profile },
     RequestsTab: { screen: Requests },
 }, {
-    tabBarComponent: TabBarBottom,
-    tabBarPosition: 'bottom',
-    animationEnabled: true,
-    swipeEnabled: true,
-}
-    
+        tabBarComponent: TabBarBottom,
+        tabBarPosition: 'bottom',
+        animationEnabled: true,
+        swipeEnabled: true,
+        tabBarOptions: {
+            showLabel: false,
+        }
+    }
+
 );
 export default Home;
